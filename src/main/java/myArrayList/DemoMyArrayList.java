@@ -1,28 +1,30 @@
 package myArrayList;
-
 public class DemoMyArrayList {
     public static void main(String[] args) {
         MyArrayList<String> myArrayList = new MyArrayList<>(String.class);
+        
         myArrayList.add("Hello");
-        myArrayList.add("Dima!");
-        myArrayList.add("How");
-        myArrayList.add("are");
-        myArrayList.add("you");
-        myArrayList.add("?");
+        myArrayList.add("world");
+        myArrayList.add("!");
+        System.out.println("myArrayList.size() = " + myArrayList.size());
+        System.out.println("myArrayList = " + myArrayList.toString());
 
-        for(int i = 0; i < myArrayList.size(); i++){
-            System.out.println("myArrayList.get(" + i + ") = " + myArrayList.get(i));
-        }
+        myArrayList.remove(3);//Error
+        System.out.println("myArrayList after remove() = " + myArrayList.toString());
 
+        myArrayList.remove(1);
+        System.out.println("myArrayList after remove() = " + myArrayList.toString());
+
+        myArrayList.add("some text");
+        System.out.println("myArrayList add() after remove() = " + myArrayList.toString());
+
+
+        System.out.println("myArrayList.get(3) = " + myArrayList.get(3));//Error
         myArrayList.clear();
+        System.out.println("myArrayList after clear() = " + myArrayList.toString());
 
-        myArrayList.add("Hello");
-        myArrayList.add("Dima!");
-        myArrayList.add("How");
-        myArrayList.add("are");
-
-        for(int i = 0; i < myArrayList.size(); i++){
-            System.out.println("myArrayList.get(" + i + ") = " + myArrayList.get(i));
-        }
+        System.out.println("myArrayList.get(0) = " + myArrayList.get(0));
+        myArrayList.clear();
+        System.out.println("myArrayList after clear() = " + myArrayList.toString());
     }
 }
