@@ -1,23 +1,29 @@
-package myQueue;
+package myStack;
 
 import java.util.Arrays;
 
-public class MyQueue<T>{
-    private final int DEFAULT_CAPACITY = 10;
+public class MyStack<T> {
+    private  final int DEFAULT_CAPACITY = 10;
     private T[] values;
-    private int size;
+    private int size = 0;
 
-    public MyQueue(){
+    public MyStack(){
         values = (T[]) new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
-    public void add(T value){
-        if(size >= values.length){
-            values = Arrays.copyOf(values, values.length+DEFAULT_CAPACITY);
-        }
+    public void push(T value){
+        if(size >= values.length)
+            values = Arrays.copyOf(values,values.length+DEFAULT_CAPACITY);
+
         values[size] = value;
         size++;
+    }
+
+    public void remove(int index){
+        System.arraycopy(values,index + 1,values,index,values.length-index-1);
+        values[values.length-1] = null;
+        size--;
     }
 
     public void clear(){
@@ -29,18 +35,7 @@ public class MyQueue<T>{
         return size;
     }
 
-    public T peek(){
-        return values[0];
-    }
-
-    public T poll(){
-        T returnValue = values[0];
-        values = Arrays.copyOfRange(values,1, values.length);
-        size--;
-        return returnValue;
-    }
-
-    @Override
+        @Override
     public String toString() {
         StringBuilder returnValue = new StringBuilder("[");
         for (int i = 0; i < size; i++) {

@@ -13,5 +13,27 @@ public class DemoMyQueue {
         System.out.println(myQueue.toString());
         System.out.println("myQueue.size() = " + myQueue.size());
 
+        System.out.println("myQueue.peek() = " + myQueue.peek());
+        System.out.println(myQueue.toString());
+
+        System.out.println("myQueue.poll() = " + myQueue.poll());
+        System.out.println(myQueue.toString());
+
+        myQueue.add(7);
+        myQueue.add(8);
+        myQueue.add(9);
+        myQueue.add(10);
+        myQueue.add(11);
+        myQueue.add(12);
+        myQueue.add(13);
+        System.out.println(myQueue.toString());
+
+        myQueue.clear();
+        System.out.println(myQueue.toString());
+
+        myQueue.add(14);
+        myQueue.add(15);
+        myQueue.add(16);
+        System.out.println(myQueue.toString());
     }
 }

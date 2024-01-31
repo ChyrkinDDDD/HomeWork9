@@ -18,11 +18,6 @@ public class DemoMyArrayList {
         myArrayList.add("some text");
         System.out.println("myArrayList add() after remove() = " + myArrayList.toString());
 
-
-        System.out.println("myArrayList.get(3) = " + myArrayList.get(3));//Error
-        myArrayList.clear();
-        System.out.println("myArrayList after clear() = " + myArrayList.toString());
-
         System.out.println("myArrayList.get(0) = " + myArrayList.get(0));
         myArrayList.clear();
         System.out.println("myArrayList after clear() = " + myArrayList.toString());
