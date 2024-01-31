@@ -6,10 +6,15 @@ import java.util.Arrays;
 public class MyArrayList<T> {
     private T[] values;
     private int indexLastElement = 0;
-    private Class<T> clazz;
-    public MyArrayList(Class<T> clazz){
-        this.clazz = clazz;
-        values = (T[]) Array.newInstance(clazz,1);
+//    private Class<T> clazz;
+//    public MyArrayList(Class<T> clazz){
+//        this.clazz = clazz;
+//        values = (T[]) Array.newInstance(clazz,1);
+//    }
+
+    public MyArrayList(){
+//        this.clazz = clazz;
+        values = (T[]) new Object[1];
     }
 
     public void add(T element){
@@ -62,7 +67,8 @@ public class MyArrayList<T> {
         return null;
     }
     public void clear(){
-        values = (T[]) Array.newInstance(clazz,1);
+        //values = (T[]) Array.newInstance(clazz,1);
+        values = (T[]) new Object[1];
         indexLastElement = 0;
     }
 
