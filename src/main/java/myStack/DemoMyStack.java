@@ -18,5 +18,13 @@ public class DemoMyStack {
         myStack.remove(4);
 
         System.out.println("myStack = " + myStack.toString());
+
+        System.out.println("myStack.peek() = " + myStack.peek());
+        System.out.println("myStack.pop() = " + myStack.pop());
+        System.out.println("myStack.pop() = " + myStack.pop());
+        System.out.println("myStack = " + myStack.toString());
+
+        myStack.clear();
+        System.out.println("myStack after clear: " + myStack.toString());
     }
 }

@@ -35,6 +35,16 @@ public class MyStack<T> {
         return size;
     }
 
+    public T peek(){
+        return values[size - 1];
+    }
+    public T pop(){
+        size--;
+        T returnResult = values[size];
+        values[size] = null;
+        return returnResult;
+    }
+
         @Override
     public String toString() {
         StringBuilder returnValue = new StringBuilder("[");

@@ -13,9 +13,9 @@ public class MyQueue<T>{
     }
 
     public void add(T value){
-        if(size >= values.length){
-            values = Arrays.copyOf(values, values.length+DEFAULT_CAPACITY);
-        }
+        if(size >= values.length)
+            values = Arrays.copyOf(values,values.length+DEFAULT_CAPACITY);
+
         values[size] = value;
         size++;
     }
@@ -35,7 +35,8 @@ public class MyQueue<T>{
 
     public T poll(){
         T returnValue = values[0];
-        values = Arrays.copyOfRange(values,1, values.length);
+        //values = Arrays.copyOfRange(values,1, values.length);
+        System.arraycopy(values,1,values,0, size);
         size--;
         return returnValue;
     }

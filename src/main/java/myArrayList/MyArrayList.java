@@ -11,11 +11,11 @@ public class MyArrayList<T> {
         values = (T[]) new Object[DEFAULT_CAPACITY];
     }
 
-    public void add(T element){
-        if(size >= values.length){
-            values = Arrays.copyOf(values, values.length+ DEFAULT_CAPACITY);
-        }
-        values[size] = element;
+    public void add(T value){
+        if(size >= values.length)
+            values = Arrays.copyOf(values,values.length+DEFAULT_CAPACITY);
+
+        values[size] = value;
         size++;
     }
 
