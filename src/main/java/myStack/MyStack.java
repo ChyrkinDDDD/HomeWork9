@@ -1,6 +1,7 @@
 package myStack;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MyStack<T> {
     private  final int DEFAULT_CAPACITY = 10;
@@ -21,6 +22,7 @@ public class MyStack<T> {
     }
 
     public void remove(int index){
+        Objects.checkIndex(index,size);
         System.arraycopy(values,index + 1,values,index,values.length-index-1);
         values[values.length-1] = null;
         size--;

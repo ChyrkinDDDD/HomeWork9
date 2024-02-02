@@ -1,6 +1,7 @@
 package myArrayList;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MyArrayList<T> {
     private final int DEFAULT_CAPACITY = 10;
@@ -36,6 +37,7 @@ public class MyArrayList<T> {
 //        T[]tmp2 = Arrays.copyOfRange(values,indexRemoveElement+1,values.length);
 //        values = Arrays.copyOf(tmp1,values.length-1);
 //        System.arraycopy(tmp2, 0, values, tmp1.length, tmp2.length);
+        Objects.checkIndex(index, size);
 
         System.arraycopy(values,index + 1,values,index,values.length-index-1);
         values[values.length-1] = null;
@@ -44,7 +46,8 @@ public class MyArrayList<T> {
     }
 
     public T get(int index){
-            return values[index];
+        Objects.checkIndex(index, size);
+        return values[index];
     }
     public void clear(){
         values = (T[]) new Object[DEFAULT_CAPACITY];

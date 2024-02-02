@@ -20,8 +20,11 @@ public class DemoMyStack {
         System.out.println("myStack = " + myStack.toString());
 
         System.out.println("myStack.peek() = " + myStack.peek());
+        System.out.println("myStack.size() = " + myStack.size());
+
         System.out.println("myStack.pop() = " + myStack.pop());
         System.out.println("myStack.pop() = " + myStack.pop());
+        System.out.println("myStack.size() = " + myStack.size());
         System.out.println("myStack = " + myStack.toString());
 
         myStack.clear();
