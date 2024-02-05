@@ -5,7 +5,7 @@ import java.util.Objects;
 public class MyLinkedList<T> {
     private Node<T> head;
     private Node<T> tail;
-    private int size;
+    private int size = 0;
     public void add(T element){
         Node<T> node = new Node<>(element);
 
